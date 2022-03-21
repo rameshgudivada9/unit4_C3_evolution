@@ -1,0 +1,11 @@
+const mongoose = require("mongoose")
+
+const publicSchema = new mongoose.Schema({
+    name:{type:String,required:true},
+},
+{
+    versionKey: false,
+    timestamps: true,
+})
+
+module.exports = mongoose.model("publication",publicSchema)
